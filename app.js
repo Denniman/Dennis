@@ -6,7 +6,7 @@ const data = [
   ];
   
   const interestCalculator = (data) => {
-    return data.map((item) => {
+    const interestData = data.map((item) => {
       const { principal, time } = item;
       let rate = 0;
   
@@ -28,16 +28,16 @@ const data = [
           break;
       }
   
-      const interestData = {
+      return  {
         ...item,
         rate,
         interest: (principal * rate * time) / 100,
-      };
-  
-      console.log(interestData);
-  
-      return;
+      };   
     });
+   
+      console.log(interestData)
+      
+      return interestData
   };
   
   interestCalculator(data);
