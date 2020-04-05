@@ -24,7 +24,7 @@ const data = [
           break;
   
         default:
-          rate += 2;
+          rate += 1;
           break;
       }
   
